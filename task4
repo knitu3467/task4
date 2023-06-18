@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Change Font Color and Background Color</title>
+  <style>
+    .green-bg {
+      background-color: green;
+    }
+  </style>
+</head>
+<body>
+  <ul id="item-list">
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ul>
+
+  <script>
+    // Change font color to green for the 2nd item
+    var itemList = document.querySelectorAll('#item-list li');
+    if (itemList.length >= 2) {
+      itemList[1].style.color = 'green';
+    }
+
+    // Change background color to green for all odd elements
+    var oddElements = document.querySelectorAll('#item-list li:nth-child(odd)');
+    for (var i = 0; i < oddElements.length; i++) {
+      oddElements[i].classList.add('green-bg');
+    }
+  </script>
+</body>
+</html>
